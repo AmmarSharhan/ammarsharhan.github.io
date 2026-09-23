@@ -1,0 +1,201 @@
+/* ===========================================================
+   AMMAR SHARHAN PORTFOLIO - GLOBAL STYLE
+   -----------------------------------------------------------
+   Contains ONLY:
+   - Base HTML / Body / Resets
+   - Global Selection & Scrollbar
+   - Performance & Rendering Optimizations
+   - Global Dark Mode Transitions
+=========================================================== */
+
+/* ===========================================================
+   BASE & HTML
+=========================================================== */
+
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    direction: rtl;
+    overflow-x: hidden;
+    padding-top: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body Lock for Mobile Menu */
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* ===========================================================
+   BASE ELEMENTS RESET
+=========================================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast, 0.2s ease);
+}
+
+button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Selection */
+::selection {
+    background: var(--primary);
+    color: var(--text-inverse, #ffffff);
+}
+
+
+/* ===========================================================
+   CUSTOM SCROLLBAR
+=========================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--radius-full, 999px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+
+/* ===========================================================
+   PERFORMANCE & RENDERING OPTIMIZATIONS
+=========================================================== */
+
+img,
+button,
+a,
+.card,
+.project-card,
+.service-card,
+.skill-card,
+.blog-card {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+
+/* ===========================================================
+   GLOBAL DARK MODE TRANSITIONS
+=========================================================== */
+
+body,
+.header,
+.footer,
+.card,
+.service-card,
+.project-card,
+.skill-card,
+.timeline-content,
+.contact-card {
+    transition: 
+        background-color var(--transition-normal, 0.35s ease),
+        color var(--transition-normal, 0.35s ease),
+        border-color var(--transition-normal, 0.35s ease),
+        box-shadow var(--transition-normal, 0.35s ease);
+}
+
+
+/* ===========================================================
+   GLOBAL OVERRIDES
+=========================================================== */
+
+.mouse-glow,
+.glow,
+.blob {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+/* ===========================================================
+   PERMANENT CURSOR GLOW DISABLE (GLOBAL OVERRIDE)
+=========================================================== */
+
+/* إلغاء طبقات شعاع الماوس كلياً سواء كانت بـ ID أو Class أو محقونة عبر JS */
+.cursor-glow,
+#cursor-glow,
+.mouse-glow,
+.glow,
+.blob,
+[class*="glow"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* إلغاء التوهج الخلفي المعتمد على Pseudo-elements لجميع البطاقات */
+.blog-card::before,
+.blog-card::after,
+.service-card::before,
+.service-card::after,
+.project-card::before,
+.project-card::after,
+.card::before,
+.card::after {
+    display: none !important;
+    background: none !important;
+}
+/* ===========================================================
+   LTR / ENGLISH MODE
+=========================================================== */
+html[dir="ltr"] body {
+    direction: ltr;
+}
+
+html[dir="ltr"] .nav a::after {
+    right: auto;
+    left: 0;
+}
+
+html[dir="ltr"] .project-study-details li {
+    padding-right: 0;
+    padding-left: 22px;
+}
+
+html[dir="ltr"] .project-study-details li::before {
+    right: auto;
+    left: 0;
+}
+
+html[dir="ltr"] .contact-info-item,
+html[dir="ltr"] .footer {
+    text-align: left;
+}
+
+html[dir="ltr"] .contact-info-item:hover {
+    transform: translateX(4px);
+}

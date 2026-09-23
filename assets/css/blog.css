@@ -1,0 +1,225 @@
+/* =========================================================
+   BLOG PAGE — تنسيق مستقل لصفحة المدونة
+========================================================= */
+
+/* 01 — HERO SECTION */
+.blog-page-hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.blog-page-hero .container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-page-hero .section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+}
+
+.blog-page-hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem) !important;
+    line-height: 1.3 !important;
+    font-weight: 800;
+    margin: 0 0 16px !important;
+    text-align: center;
+}
+
+.blog-page-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1rem !important;
+    line-height: 1.9 !important;
+    color: var(--muted-text);
+    text-align: center;
+}
+
+/* 02 — MAIN CONTENT & GRID */
+.blog-detail-section {
+    padding: 60px 0 100px;
+}
+
+.blog-detail-section .container {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* 03 — BLOG CARDS */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: var(--background);
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.blog-card .card-category {
+    display: inline-block;
+    color: var(--primary, #4f46e5);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.blog-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.blog-card p {
+    margin: 0;
+    color: var(--muted-text);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.blog-card-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 20px;
+    color: var(--primary, #4f46e5);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* 04 — CTA & ACTIONS */
+.blog-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* 05 — RESPONSIVE */
+@media (max-width: 900px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-page-hero {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+    .blog-detail-section {
+        padding: 40px 0 70px;
+    }
+    .blog-card {
+        padding: 24px;
+    }
+}
+
+/* تنسيق رابط قراءة المقال داخل بطاقة المدونة */
+.read-more-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color, #007bff);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.read-more-link:hover {
+    transform: translateX(-5px);
+    color: var(--accent-color, #0056b3);
+}
+
+/* =========================================================
+   تنسيق صفحة المقال المنفرد (blog-single) وحل تداخل الهيدر
+========================================================== */
+.single-post-section {
+    padding-top: 150px; /* مسافة علوية لإبعاد المحتوى عن الهيدر الثابت */
+    padding-bottom: 80px;
+    min-height: 70vh;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.post-header h1 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: var(--text-muted, #a0aec0);
+    font-size: 0.95rem;
+    margin-top: 15px;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-size: 1.1rem;
+}
+
+.post-content .lead-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.post-content blockquote {
+    border-right: 4px solid var(--primary);
+    padding: 15px 20px;
+    margin: 30px 0;
+    background: var(--primary-light);
+    border-radius: 6px;
+}
+
+.post-content ul {
+    margin: 20px 0;
+    padding-right: 25px;
+}
+
+.post-content li {
+    margin-bottom: 10px;
+}
+
+.post-footer-actions {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* لتنسيق الأزرار تحت بعضها في الشاشات الصغيرة جداً */
+}

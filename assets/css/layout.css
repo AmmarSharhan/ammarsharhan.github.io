@@ -1,0 +1,936 @@
+/* ===========================================================
+   LAYOUT
+   يحتوي فقط على:
+
+   Header
+   Hero Layout
+   About Layout
+   Skills Layout
+   Services Layout
+   Projects Layout
+   Experience Layout
+   Contact Layout
+   Footer Layout
+
+   ممنوع وضع تصميم البطاقات هنا.
+=========================================================== */
+/* ==========================================
+   Layout
+========================================== */
+
+.container{
+    width:min(1200px,90%);
+    margin-inline:auto;
+}
+
+/* ==========================================
+   Header Layout
+========================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(226,232,240,.7);
+
+    box-shadow:0 6px 24px rgba(15,23,42,.05);
+
+    z-index:1000;
+
+    transition:
+        background .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+.header.scrolled{
+
+    background:rgba(255,255,255,.95);
+
+    border-bottom:1px solid rgba(226,232,240,.95);
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+}
+
+.header .container{
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:58px;
+
+    display:block;
+
+}
+
+.nav ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:36px;
+
+}
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/* ==========================================
+   Hero
+========================================== */
+
+.hero{
+
+    min-height:calc(100vh - 80px);
+
+    display:flex;
+
+    align-items:center;
+
+    background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);
+
+}
+
+.hero-container{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.hero-content h1{
+
+    font-size:64px;
+
+    margin:20px 0 10px;
+
+}
+
+.hero-content h2{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    margin-bottom:24px;
+
+    font-weight:700;
+
+}
+
+.hero-content p{
+
+    max-width:620px;
+
+    font-size:18px;
+
+    line-height:2;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image-wrapper{
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    padding:10px;
+
+    box-shadow:var(--shadow-lg);
+
+    position:relative;
+
+}
+
+.hero-image-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-20px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.18),
+    transparent 70%);
+
+    z-index:0;
+
+}
+
+.hero-image-wrapper img{
+
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+/* ==========================================
+   About Section
+========================================== */
+
+.about{
+
+    padding:120px 0;
+
+    background:#fff;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+/* ==========================================
+   Services Section
+========================================== */
+
+.services{
+
+    padding:120px 0;
+
+    background:var(--background);
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:28px;
+
+    margin-top:60px;
+
+}
+/* ==========================================
+   Projects Section
+========================================== */
+
+.projects{
+
+    padding:120px 0;
+
+    background:#fff;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+/* ==========================================
+   Skills Section
+========================================== */
+
+.skills{
+
+    padding:120px 0;
+
+    background:var(--background);
+
+}
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+/* ==========================================
+   Experience Section
+========================================== */
+
+.experience{
+
+    padding:120px 0;
+
+    background:var(--background);
+
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:70px auto 0;
+
+    padding-right:35px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:10px;
+
+    top:0;
+
+    width:2px;
+
+    height:100%;
+
+    background:rgba(43,39,124,.15);
+
+}
+/* ==========================================
+   Contact Layout
+========================================== */
+
+.contact{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+/* ==========================================
+   Footer
+========================================== */
+
+.footer{
+
+    background:var(--text);
+
+    color:#fff;
+
+    padding:80px 0 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:60px;
+
+}
+
+.footer-bottom{
+
+    margin-top:50px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    
+
+    align-items:center;
+
+}
+/* ==========================================
+   Header Scroll State
+========================================== */
+
+.header.scrolled{
+
+    background:rgba(255,255,255,.95);
+
+    border-bottom:1px solid rgba(226,232,240,.95);
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+}
+
+a{
+
+    transition:
+        color .25s ease;
+
+}
+section{
+
+    scroll-margin-top:100px;
+
+}
+
+/* ===========================================================
+   PREMIUM LAYOUT PACK 1
+   Hero • Background • Shapes • Section Decoration
+=========================================================== */
+
+/* ==========================================
+   Global Sections
+========================================== */
+
+section{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   Hero Background
+========================================== */
+
+.hero{
+
+    position:relative;
+
+    isolation:isolate;
+
+    background:
+
+        radial-gradient(circle at top right,
+        rgba(108,99,255,.10),
+        transparent 32%),
+
+        radial-gradient(circle at bottom left,
+        rgba(0,188,212,.08),
+        transparent 28%),
+
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7f9fc 100%
+        );
+
+}
+
+/* ==========================================
+   Floating Blur 1
+========================================== */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(108,99,255,.16),
+        transparent 70%);
+
+    top:-220px;
+
+    right:-180px;
+
+    z-index:-1;
+
+    animation:
+
+        heroBlob1 16s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   Floating Blur 2
+========================================== */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(0,188,212,.10),
+        transparent 70%);
+
+    bottom:-180px;
+
+    left:-120px;
+
+    z-index:-1;
+
+    animation:
+
+        heroBlob2 18s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   Hero Animation
+========================================== */
+
+@keyframes heroBlob1{
+
+    0%{
+
+        transform:
+            translateY(0)
+            translateX(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(30px)
+            translateX(-25px);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0)
+            translateX(0);
+
+    }
+
+}
+
+@keyframes heroBlob2{
+
+    0%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-30px);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   Section Decoration
+========================================== */
+
+.about::before,
+.skills::before,
+.services::before,
+.projects::before,
+.experience::before,
+.contact::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:70px;
+
+    left:60px;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(108,99,255,.08),
+        transparent 72%);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+   Container
+========================================== */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+   Premium Hero Image
+========================================== */
+
+.hero-image-wrapper{
+
+    position:relative;
+
+}
+
+.hero-image-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-18px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(108,99,255,.14);
+
+    animation:
+
+        rotateBorder 14s linear infinite;
+
+}
+
+@keyframes rotateBorder{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================
+   Section Header
+========================================== */
+
+.section-header{
+
+    position:relative;
+
+}
+
+.section-header::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin:24px auto 0;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--accent)
+        );
+
+}
+
+/* ==========================================
+   Premium Footer
+========================================== */
+
+.footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.05),
+        transparent 38%);
+
+    pointer-events:none;
+
+}
+
+/* ===========================================================
+   THEME SYSTEM
+   Layout Color Mapping
+=========================================================== */
+
+
+/* ==========================================
+   Hero
+========================================== */
+
+.hero{
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--surface) 0%,
+            var(--background) 100%
+        );
+
+}
+
+
+/* ==========================================
+   About
+========================================== */
+
+.about{
+
+    background:var(--surface);
+
+}
+
+
+/* ==========================================
+   Services
+========================================== */
+
+.services{
+
+    background:var(--background);
+
+}
+
+
+/* ==========================================
+   Skills
+========================================== */
+
+.skills{
+
+    background:var(--background);
+
+}
+
+
+/* ==========================================
+   Projects
+========================================== */
+
+.projects{
+
+    background:var(--surface);
+
+}
+
+
+/* ==========================================
+   Experience
+========================================== */
+
+.experience{
+
+    background:var(--background);
+
+}
+
+
+/* ==========================================
+   Contact
+========================================== */
+
+.contact{
+
+    background:var(--surface);
+
+}
+
+
+/* ==========================================
+   Footer
+========================================== */
+
+.footer{
+
+    background:var(--surface);
+
+}
+
+
+/* ==========================================
+   Dark Mode Layout Enhancement
+========================================== */
+
+body.dark-mode .hero{
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--surface) 0%,
+            var(--background) 100%
+        );
+
+}
+
+body.dark-mode .about,
+body.dark-mode .projects,
+body.dark-mode .contact{
+
+    background:var(--surface);
+
+}
+
+body.dark-mode .services,
+body.dark-mode .skills,
+body.dark-mode .experience{
+
+    background:var(--background);
+
+}

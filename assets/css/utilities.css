@@ -1,0 +1,126 @@
+/* ===========================================================
+   UTILITIES
+
+   يحتوي فقط على:
+
+   .flex
+   .grid
+   .text-center
+   .shadow-lg
+   .radius-md
+
+   أي Helper Classes فقط.
+
+=========================================================== */
+/* ==========================================
+   UTILITIES v2.1
+========================================== */
+
+/* Container */
+
+.container{
+
+    width:min(var(--container-width),90%);
+    margin-inline:auto;
+
+}
+
+/* Display */
+
+.flex{
+
+    display:flex;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* Text */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-primary{
+
+    color:var(--color-primary);
+
+}
+
+.text-muted{
+
+    color:var(--color-text-muted);
+
+}
+
+/* Radius */
+
+.radius-sm{
+
+    border-radius:var(--radius-sm);
+
+}
+
+.radius-md{
+
+    border-radius:var(--radius-md);
+
+}
+
+.radius-lg{
+
+    border-radius:var(--radius-lg);
+
+}
+
+.radius-pill{
+
+    border-radius:var(--radius-pill);
+
+}
+
+/* Shadows */
+
+.shadow-sm{
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.shadow-md{
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.shadow-lg{
+
+    box-shadow:var(--shadow-lg);
+
+}

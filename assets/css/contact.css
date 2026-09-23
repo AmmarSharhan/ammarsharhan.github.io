@@ -1,0 +1,2575 @@
+/* =========================================================
+   CONTACT PAGE
+   Premium Standalone Page
+   Visual Reference: About Page
+========================================================= */
+
+
+/* =========================================================
+   01 — CONTACT PAGE FOUNDATION
+========================================================= */
+
+.contact-page {
+    --contact-primary: var(--primary, #2b277c);
+    --contact-primary-dark: var(--primary-dark, #211d63);
+    --contact-accent: var(--accent, #00bcd4);
+
+    --contact-surface: var(--surface, #ffffff);
+    --contact-background: var(--background, #f7f9fc);
+
+    --contact-text: var(--text, #111827);
+    --contact-text-light: var(--text-light, #64748b);
+    --contact-text-muted: var(--text-muted, #94a3b8);
+
+    --contact-border: rgba(43, 39, 124, .10);
+
+    color: var(--contact-text);
+    background: var(--contact-background);
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   02 — RESET OVERRIDES
+========================================================= */
+
+/*
+   components.css contains a global img opacity rule.
+   The standalone contact page must not inherit it.
+*/
+
+.contact-page img,
+.header img,
+.footer img {
+    opacity: 1;
+}
+
+
+/* Prevent global section rules from affecting our page */
+
+.contact-page section {
+    position: relative;
+    overflow: visible;
+}
+
+
+/* =========================================================
+   03 — HEADER
+========================================================= */
+
+/* 1. تعريف المتغيرات إذا لم تكن معرفة سابقاً */
+:root {
+    --contact-primary: #2b2680;      /* أضف اللون الأساسي للزر */
+    --contact-primary-dark: #1e1a5e; /* لون الزر عند الهوفر */
+    --contact-accent: #4f46e5;
+}
+
+/* 2. ضبط box-sizing لكافة العناصر داخل صفحة التواصل */
+.contact-page, 
+.contact-page * {
+    box-sizing: border-box;
+}
+
+/* 3. تنسيق الهيدر */
+.header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.header.scrolled {
+    background: var(--surface);
+    border-bottom-color: var(--border);
+}
+
+/* 4. روابط التنقل */
+.header .nav a {
+    color: var(--text);
+}
+
+.header .nav a:hover,
+.header .nav a.active {
+    color: var(--primary);
+}
+
+.header .nav a::after {
+    background: linear-gradient(
+        90deg,
+        var(--contact-primary),
+        var(--contact-accent)
+    );
+}
+
+.header .logo img {
+    width: 58px;
+    height: auto;
+    opacity: 1;
+}
+
+/* 5. الأزرار في الهيدر */
+.header-actions .icon-btn {
+    background: var(--surface);
+    color: var(--text);
+}
+
+.header-actions .icon-btn:hover {
+    background: var(--contact-primary);
+    color: #ffffff;
+}
+
+.header-actions .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--contact-primary);
+    color: #ffffff;
+    border: 1px solid var(--contact-primary);
+    text-decoration: none;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-actions .btn-primary:hover {
+    background: var(--contact-primary-dark);
+    color: #ffffff;
+}
+/* =========================================================
+   04 — PAGE HERO
+========================================================= */
+
+.contact-page-hero {
+    padding: 150px 0 85px;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(108, 99, 255, .09),
+            transparent 26%
+        ),
+        radial-gradient(
+            circle at 10% 75%,
+            rgba(0, 188, 212, .07),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fafc 100%
+        );
+    text-align: center;
+    overflow: hidden !important;
+}
+
+
+/* Decorative glow */
+
+.contact-page-hero::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 40px;
+    right: -130px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(108, 99, 255, .10),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.contact-page-hero::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    bottom: -100px;
+    left: -80px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(0, 188, 212, .08),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+
+/* Hero Content */
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin-inline: auto;
+}
+
+
+/* Badge */
+
+.contact-page .section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+    padding: 9px 20px;
+
+    border: 1px solid rgba(43, 39, 124, .08);
+    border-radius: 999px;
+
+    background: rgba(108, 99, 255, .08);
+    color: var(--contact-primary);
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* Hero Title */
+
+.contact-hero-content h1 {
+    max-width: 850px;
+    margin: 0 auto 24px;
+
+    color: var(--contact-text);
+
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -.03em;
+}
+
+.contact-hero-content h1 span {
+    display: block;
+    margin-top: 8px;
+    color: var(--contact-primary);
+}
+
+
+/* Hero Description */
+
+.contact-hero-content > p {
+    max-width: 720px;
+    margin: 0 auto;
+
+    color: var(--contact-text-light);
+
+    font-size: 17px;
+    line-height: 2;
+}
+
+
+/* =========================================================
+   05 — HERO DECORATIVE LINE
+========================================================= */
+
+.contact-hero-content::after {
+    content: "";
+
+    display: block;
+
+    width: 82px;
+    height: 4px;
+
+    margin: 30px auto 0;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        var(--contact-primary),
+        var(--contact-accent)
+    );
+}
+
+
+/* =========================================================
+   06 — CONTACT MAIN
+========================================================= */
+
+.contact-page-main {
+    padding: 25px 0 100px;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   07 — MAIN GRID
+========================================================= */
+
+.contact-page-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 34px;
+
+    max-width: 1100px;
+    margin-inline: auto;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   08 — UNIVERSAL CONTACT CARD
+========================================================= */
+
+.contact-info-card,
+.contact-start-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    padding: 36px;
+
+    border: 1px solid var(--contact-border);
+    border-radius: 22px;
+
+    background: var(--contact-surface);
+
+    box-shadow:
+        0 15px 45px rgba(20, 25, 50, .06);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+
+.contact-info-card:hover,
+.contact-start-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(43, 39, 124, .17);
+
+    box-shadow:
+        0 24px 60px rgba(20, 25, 50, .10);
+}
+
+
+/* Subtle card glow */
+
+.contact-info-card::before,
+.contact-start-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -100px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(108, 99, 255, .08),
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   09 — CARD NUMBER
+========================================================= */
+
+.contact-card-number {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    background: rgba(108, 99, 255, .08);
+
+    color: var(--contact-primary);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   10 — CARD HEADER
+========================================================= */
+
+.contact-card-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+.contact-card-header .contact-card-number {
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   11 — MINI LABEL
+========================================================= */
+
+.contact-mini-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--contact-text-muted);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   12 — CARD TITLES
+========================================================= */
+
+.contact-info-card h2,
+.contact-start-card h2 {
+
+    margin: 0;
+
+    color: var(--contact-text);
+
+    font-size: 28px;
+    font-weight: 800;
+
+    line-height: 1.35;
+}
+
+.contact-start-card h2 span {
+    color: var(--contact-primary);
+}
+
+
+/* =========================================================
+   13 — CARD INTRO
+========================================================= */
+
+.contact-card-intro,
+.contact-start-card > p {
+
+    margin: 0;
+
+    color: var(--contact-text-light);
+
+    font-size: 15px;
+
+    line-height: 2;
+
+}
+
+
+/* Contact info intro */
+
+.contact-card-intro {
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   14 — CONTACT INFO ITEMS
+========================================================= */
+
+.contact-info-item {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-height: 76px;
+
+    padding: 13px 0;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(226, 232, 240, .9);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+
+.contact-info-item:last-child {
+    border-bottom: none;
+}
+
+
+.contact-info-item:hover {
+    transform: translateX(-5px);
+}
+
+
+.contact-info-item:hover .contact-info-icon {
+    background: var(--contact-primary);
+    color: #ffffff;
+}
+
+
+.contact-info-item:hover .contact-info-arrow {
+    color: var(--contact-primary);
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   15 — CONTACT ICON
+========================================================= */
+
+.contact-info-icon {
+
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(108, 99, 255, .08);
+
+    color: var(--contact-primary);
+
+    font-size: 20px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/* =========================================================
+   16 — CONTACT CONTENT
+========================================================= */
+
+.contact-info-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+.contact-info-content strong {
+
+    color: var(--contact-text);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.contact-info-content small {
+
+    color: var(--contact-text-light);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   17 — CONTACT ARROW
+========================================================= */
+
+.contact-info-arrow {
+
+    flex: 0 0 auto;
+
+    color: var(--contact-text-muted);
+
+    font-size: 18px;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+}
+
+
+/* Static location */
+
+.contact-info-static {
+    cursor: default;
+}
+
+.contact-info-static:hover {
+    transform: none;
+}
+
+.contact-info-static:hover .contact-info-icon {
+    background: rgba(108, 99, 255, .08);
+    color: var(--contact-primary);
+}
+
+
+/* =========================================================
+   18 — START PROJECT CARD
+========================================================= */
+
+.contact-start-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   19 — SERVICE TAGS
+========================================================= */
+
+.contact-service-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 25px 0 30px;
+}
+
+.contact-service-tags span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 9px 14px;
+
+    border: 1px solid rgba(43, 39, 124, .08);
+
+    border-radius: 10px;
+
+    background: rgba(108, 99, 255, .055);
+
+    color: var(--contact-text);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+.contact-service-tags span:hover {
+
+    background: var(--contact-primary);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   20 — MAIN CONTACT BUTTON
+========================================================= */
+
+.contact-main-button {
+
+    align-self: flex-start;
+
+    min-width: 175px;
+
+    padding: 14px 24px;
+
+    border-radius: 14px;
+
+    background: var(--contact-primary);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(43, 39, 124, .18);
+}
+
+
+.contact-main-button:hover {
+
+    background: var(--contact-primary-dark);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(43, 39, 124, .24);
+}
+
+
+.contact-main-button span {
+
+    display: inline-block;
+
+    transition: transform .3s ease;
+}
+
+.contact-main-button:hover span {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   21 — RESPONSE NOTE
+========================================================= */
+
+.contact-response-note {
+
+    margin-top: 20px !important;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(226, 232, 240, .8);
+
+    color: var(--contact-text-muted) !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.8 !important;
+}
+
+
+/* =========================================================
+   22 — FINAL CTA
+========================================================= */
+
+.contact-final-cta {
+
+    padding: 100px 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(108, 99, 255, .08),
+            transparent 30%
+        ),
+        var(--contact-background);
+
+    text-align: center;
+}
+
+
+.contact-final-content {
+
+    max-width: 720px;
+
+    margin-inline: auto;
+}
+
+
+.contact-final-content h2 {
+
+    margin: 0 0 15px;
+
+    color: var(--contact-text);
+
+    font-size: clamp(30px, 4vw, 44px);
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.contact-final-content p {
+
+    margin: 0 auto 28px;
+
+    color: var(--contact-text-light);
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+.contact-final-content .btn {
+
+    min-width: 190px;
+}
+
+
+/* =========================================================
+   23 — FOOTER
+========================================================= */
+
+.footer {
+
+    position: relative;
+
+    padding: 80px 0 30px;
+
+    background: #111827 !important;
+
+    color: #ffffff;
+
+    border-top: 1px solid rgba(255, 255, 255, .05);
+
+    overflow: hidden;
+}
+
+
+/* Footer glow */
+
+.footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: -280px;
+    left: -180px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(108, 99, 255, .08),
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   24 — FOOTER GRID
+========================================================= */
+
+.footer-grid {
+
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   25 — FOOTER BRAND
+========================================================= */
+
+.footer-brand img {
+
+    width: 68px;
+
+    height: auto;
+
+    margin-bottom: 18px;
+
+    opacity: 1 !important;
+}
+
+
+.footer-brand h3 {
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+.footer-brand p {
+
+    max-width: 330px;
+
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   26 — FOOTER TITLES
+========================================================= */
+
+.footer-links h4,
+.footer-contact h4 {
+
+    margin: 0 0 22px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   27 — FOOTER LINKS
+========================================================= */
+
+.footer-links ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.footer-links a {
+
+    display: inline-flex;
+
+    color: #cbd5e1 !important;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.footer-links a:hover,
+.footer-links a.active {
+
+    color: #ffffff !important;
+
+    transform: translateX(-5px);
+}
+
+
+/* =========================================================
+   28 — FOOTER CONTACT
+========================================================= */
+
+.footer-contact p {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0 0 14px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   29 — FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 55px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+.back-to-top {
+
+    color: #cbd5e1 !important;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.back-to-top:hover {
+
+    color: #ffffff !important;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   30 — DARK MODE
+========================================================= */
+
+body.dark-mode .contact-page {
+
+    background: var(--background);
+
+    color: var(--text);
+}
+
+
+body.dark-mode .contact-page-hero {
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(108, 99, 255, .14),
+            transparent 26%
+        ),
+        linear-gradient(
+            180deg,
+            var(--surface) 0%,
+            var(--background) 100%
+        );
+}
+
+
+body.dark-mode .contact-page-main {
+
+    background: var(--surface);
+}
+
+
+body.dark-mode .contact-info-card,
+body.dark-mode .contact-start-card {
+
+    background: var(--surface);
+
+    border-color: rgba(255, 255, 255, .08);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, .18);
+}
+
+
+body.dark-mode .contact-info-card:hover,
+body.dark-mode .contact-start-card:hover {
+
+    border-color: rgba(255, 255, 255, .14);
+
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, .24);
+}
+
+
+body.dark-mode .contact-hero-content h1,
+body.dark-mode .contact-info-card h2,
+body.dark-mode .contact-start-card h2,
+body.dark-mode .contact-final-content h2,
+body.dark-mode .contact-info-content strong {
+
+    color: var(--text);
+}
+
+
+body.dark-mode .contact-hero-content > p,
+body.dark-mode .contact-card-intro,
+body.dark-mode .contact-start-card > p,
+body.dark-mode .contact-info-content small,
+body.dark-mode .contact-final-content p {
+
+    color: var(--text-light);
+}
+
+
+body.dark-mode .contact-info-item {
+
+    border-bottom-color: rgba(255, 255, 255, .08);
+}
+
+
+body.dark-mode .contact-service-tags span {
+
+    background: rgba(255, 255, 255, .04);
+
+    border-color: rgba(255, 255, 255, .08);
+
+    color: var(--text);
+}
+
+
+body.dark-mode .contact-response-note {
+
+    border-top-color: rgba(255, 255, 255, .08);
+
+    color: var(--text-muted) !important;
+}
+
+
+body.dark-mode .contact-final-cta {
+
+    background: var(--background);
+}
+
+
+/* =========================================================
+   31 — RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-page-hero {
+        padding-top: 135px;
+        padding-bottom: 70px;
+    }
+
+
+    .contact-page-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 720px;
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 45px;
+    }
+
+
+    .footer-brand {
+
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   32 — RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .contact-page-hero {
+
+        padding: 120px 0 60px;
+    }
+
+
+    .contact-hero-content h1 {
+
+        font-size: 36px;
+
+        line-height: 1.35;
+    }
+
+
+    .contact-hero-content > p {
+
+        font-size: 14px;
+
+        line-height: 1.9;
+    }
+
+
+    .contact-page-main {
+
+        padding: 10px 0 70px;
+    }
+
+
+    .contact-page-grid {
+
+        gap: 20px;
+    }
+
+
+    .contact-info-card,
+    .contact-start-card {
+
+        padding: 25px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .contact-card-header {
+
+        gap: 14px;
+    }
+
+
+    .contact-card-number {
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+    }
+
+
+    .contact-info-card h2,
+    .contact-start-card h2 {
+
+        font-size: 24px;
+    }
+
+
+    .contact-info-item {
+
+        gap: 12px;
+
+        min-height: 70px;
+    }
+
+
+    .contact-info-icon {
+
+        flex-basis: 44px;
+
+        width: 44px;
+        height: 44px;
+
+        border-radius: 12px;
+
+        font-size: 18px;
+    }
+
+
+    .contact-info-content strong {
+
+        font-size: 14px;
+    }
+
+
+    .contact-info-content small {
+
+        font-size: 12px;
+    }
+
+
+    .contact-info-arrow {
+
+        font-size: 15px;
+    }
+
+
+    .contact-service-tags {
+
+        gap: 8px;
+
+        margin: 22px 0 25px;
+    }
+
+
+    .contact-service-tags span {
+
+        padding: 8px 11px;
+
+        font-size: 12px;
+    }
+
+
+    .contact-main-button {
+
+        width: 100%;
+    }
+
+
+    .contact-final-cta {
+
+        padding: 75px 0;
+    }
+
+
+    .contact-final-content h2 {
+
+        font-size: 30px;
+    }
+
+
+    .contact-final-content p {
+
+        font-size: 14px;
+    }
+
+
+    .footer {
+
+        padding: 65px 0 25px;
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .footer-brand {
+
+        grid-column: auto;
+    }
+
+
+    .footer-brand p {
+
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        margin-top: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   33 — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-info-card,
+    .contact-start-card,
+    .contact-info-item,
+    .contact-service-tags span,
+    .contact-main-button,
+    .footer-links a,
+    .back-to-top {
+
+        transition: none !important;
+    }
+
+}
+/* =========================================================
+   CONTACT PAGE — TYPOGRAPHY & ALIGNMENT REFINEMENT
+   المرحلة الأخيرة:
+   Typography / Spacing / Alignment
+========================================================= */
+
+
+/* =========================================================
+   01 — CONTACT PAGE BASE
+========================================================= */
+
+.contact-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page .container {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   02 — HERO TYPOGRAPHY
+   قريب من أسلوب About Page
+========================================================= */
+
+.contact-page-hero {
+    padding: 110px 20px 75px;
+    text-align: center;
+}
+
+.contact-hero-content {
+    max-width: 850px;
+    margin-inline: auto;
+}
+
+.contact-hero-content h1 {
+    max-width: 850px;
+    margin: 20px auto 18px;
+
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    line-height: 1.3;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+.contact-hero-content h1 span {
+    color: var(--primary);
+}
+
+.contact-hero-content p {
+    max-width: 720px;
+    margin: 0 auto;
+
+    font-size: 1.02rem;
+    line-height: 2;
+
+    color: var(--text-muted, #68738a);
+}
+
+
+/* =========================================================
+   03 — CONTACT MAIN SECTION
+========================================================= */
+
+.contact-page-main {
+    padding: 40px 20px 85px;
+}
+
+.contact-page-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 40px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   04 — CARD TYPOGRAPHY
+========================================================= */
+
+.contact-info-card,
+.contact-start-card {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   Contact Card Header
+========================================================= */
+
+.contact-card-header {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+.contact-card-number {
+    flex: 0 0 auto;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 42px;
+    height: 42px;
+
+    padding: 0 10px;
+
+    border-radius: 12px;
+
+    background: rgba(43, 39, 124, .08);
+
+    color: var(--primary);
+
+    font-size: .82rem;
+    font-weight: 800;
+
+    letter-spacing: .04em;
+}
+
+
+/* =========================================================
+   Small Labels
+========================================================= */
+
+.contact-mini-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-size: .82rem;
+    line-height: 1.5;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   Main Card Headings
+========================================================= */
+
+.contact-info-card h2,
+.contact-start-card h2 {
+    margin: 0;
+
+    font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+    line-height: 1.35;
+
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   Card Intro Text
+========================================================= */
+
+.contact-card-intro,
+.contact-start-card > p:not(.contact-response-note) {
+    max-width: 620px;
+
+    margin: 0 0 28px;
+
+    font-size: .98rem;
+    line-height: 2;
+
+    color: var(--text-muted, #68738a);
+}
+
+
+/* =========================================================
+   05 — CONTACT INFORMATION ITEMS
+========================================================= */
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    text-align: right;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+}
+
+.contact-info-item:hover {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   Contact Icons
+========================================================= */
+
+.contact-info-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(43, 39, 124, .07);
+
+    color: var(--primary);
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   Contact Text
+========================================================= */
+
+.contact-info-content {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.contact-info-content strong {
+    font-size: .9rem;
+    line-height: 1.6;
+
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+.contact-info-content small {
+    display: block;
+
+    font-size: .88rem;
+    line-height: 1.7;
+
+    color: var(--text-muted, #68738a);
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Arrow
+========================================================= */
+
+.contact-info-arrow {
+    flex: 0 0 auto;
+
+    color: var(--primary);
+
+    font-size: 17px;
+
+    opacity: .65;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease;
+}
+
+.contact-info-item:hover .contact-info-arrow {
+    transform: translateX(-4px);
+    opacity: 1;
+}
+
+
+/* =========================================================
+   06 — START PROJECT CARD
+========================================================= */
+
+.contact-start-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.contact-start-card .contact-card-number {
+    margin-bottom: 20px;
+}
+
+.contact-start-card .contact-mini-label {
+    margin-bottom: 10px;
+}
+
+.contact-start-card h2 {
+    margin-bottom: 18px;
+}
+
+.contact-start-card h2 span {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   07 — SERVICE TAGS
+========================================================= */
+
+.contact-service-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin: 22px 0 28px;
+}
+
+.contact-service-tags span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 36px;
+
+    padding: 7px 13px;
+
+    border: 1px solid rgba(43, 39, 124, .08);
+
+    border-radius: 999px;
+
+    background: rgba(43, 39, 124, .045);
+
+    color: var(--text);
+
+    font-size: .8rem;
+    line-height: 1.5;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   08 — MAIN BUTTON
+========================================================= */
+
+.contact-main-button {
+    min-height: 48px;
+
+    padding-inline: 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: .9rem;
+
+    font-weight: 800;
+}
+
+.contact-main-button span {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   Response Note
+========================================================= */
+
+.contact-response-note {
+    margin: 18px 0 0;
+
+    max-width: 600px;
+
+    font-size: .84rem !important;
+    line-height: 1.9 !important;
+
+    color: var(--text-muted, #68738a);
+}
+
+
+/* =========================================================
+   09 — FINAL CTA
+========================================================= */
+
+.contact-final-cta {
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.contact-final-content {
+    max-width: 720px;
+
+    margin-inline: auto;
+}
+
+.contact-final-content h2 {
+    margin: 18px 0 12px;
+
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.35;
+
+    font-weight: 800;
+}
+
+.contact-final-content p {
+    margin: 0 auto 25px;
+
+    font-size: .98rem;
+    line-height: 2;
+
+    color: var(--text-muted, #68738a);
+}
+
+
+/* =========================================================
+   10 — FOOTER TYPOGRAPHY
+========================================================= */
+
+.footer {
+    text-align: right;
+}
+
+.footer-brand h3,
+.footer-links h4,
+.footer-contact h4 {
+    line-height: 1.5;
+}
+
+.footer-brand p,
+.footer-contact p,
+.footer-links a {
+    font-size: .88rem;
+    line-height: 1.9;
+}
+
+.footer-brand p {
+    max-width: 330px;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-bottom {
+    font-size: .8rem;
+    line-height: 1.8;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   11 — PREVENT OVERSIZED GLOBAL HEADINGS
+   مهم جدًا لصفحة التواصل
+========================================================= */
+
+.contact-page h1,
+.contact-page h2,
+.contact-page h3,
+.contact-page h4,
+.contact-page p {
+    max-width: 100%;
+}
+
+.contact-page p {
+    font-size: inherit;
+}
+
+
+/* =========================================================
+   12 — DARK MODE
+========================================================= */
+
+body.dark-mode .contact-info-item:hover {
+    background: rgba(255,255,255,.025);
+}
+
+body.dark-mode .contact-service-tags span {
+    background: rgba(255,255,255,.04);
+
+    border-color: rgba(255,255,255,.08);
+}
+
+body.dark-mode .contact-info-icon {
+    background: rgba(255,255,255,.06);
+}
+
+
+/* =========================================================
+   13 — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-page-hero {
+        padding: 90px 20px 60px;
+    }
+
+    .contact-page-main {
+        padding: 30px 20px 70px;
+    }
+
+    .contact-page-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .contact-info-card,
+    .contact-start-card {
+        width: 100%;
+    }
+
+    .contact-final-cta {
+        padding: 70px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   14 — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .contact-page .container {
+        width: min(100% - 32px, 540px);
+    }
+
+    .contact-page-hero {
+        padding: 80px 16px 55px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 2rem;
+
+        line-height: 1.4;
+
+        margin-top: 18px;
+    }
+
+    .contact-hero-content p {
+        font-size: .95rem;
+
+        line-height: 1.95;
+    }
+
+    .contact-page-main {
+        padding: 20px 16px 60px;
+    }
+
+    .contact-card-header {
+        gap: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .contact-card-number {
+        min-width: 38px;
+        height: 38px;
+
+        font-size: .76rem;
+    }
+
+    .contact-info-card h2,
+    .contact-start-card h2 {
+        font-size: 1.8rem;
+
+        line-height: 1.4;
+    }
+
+    .contact-card-intro,
+    .contact-start-card > p:not(.contact-response-note) {
+        font-size: .94rem;
+
+        line-height: 1.95;
+    }
+
+    .contact-info-item {
+        gap: 12px;
+
+        padding: 14px 0;
+    }
+
+    .contact-info-icon {
+        flex-basis: 42px;
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+
+        font-size: 16px;
+    }
+
+    .contact-info-content strong {
+        font-size: .86rem;
+    }
+
+    .contact-info-content small {
+        font-size: .82rem;
+    }
+
+    .contact-info-arrow {
+        font-size: 15px;
+    }
+
+    .contact-service-tags {
+        gap: 7px;
+
+        margin: 18px 0 24px;
+    }
+
+    .contact-service-tags span {
+        min-height: 34px;
+
+        padding: 6px 11px;
+
+        font-size: .76rem;
+    }
+
+    .contact-main-button {
+        width: 100%;
+
+        min-height: 48px;
+    }
+
+    .contact-final-cta {
+        padding: 60px 16px;
+    }
+
+    .contact-final-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-final-content p {
+        font-size: .92rem;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin-inline: auto;
+    }
+
+    .footer-links ul {
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+}
+/* =========================================================
+   CONTACT PAGE — FINAL VISUAL REFINEMENT
+   Typography + Circular Navy Numbers
+========================================================= */
+
+/* ---------------------------------------------------------
+   01 — HERO
+--------------------------------------------------------- */
+
+.contact-page-hero {
+    padding: 105px 20px 60px;
+}
+
+.contact-page .section-badge {
+    margin-bottom: 18px;
+    padding: 8px 17px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-hero-content h1 {
+    max-width: 780px;
+
+    margin: 0 auto 16px;
+
+    font-size: clamp(34px, 3.6vw, 48px) !important;
+    line-height: 1.35;
+
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.contact-hero-content h1 span {
+    margin-top: 5px;
+}
+
+.contact-hero-content > p {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    font-size: 15px !important;
+    line-height: 1.9;
+}
+
+
+/* ---------------------------------------------------------
+   02 — HERO DECORATIVE LINE
+--------------------------------------------------------- */
+
+.contact-hero-content::after {
+    width: 72px;
+    height: 3px;
+
+    margin-top: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   03 — MAIN CONTACT AREA
+--------------------------------------------------------- */
+
+.contact-page-main {
+    padding: 35px 20px 75px;
+}
+
+.contact-page-grid {
+    max-width: 1050px;
+    gap: 28px;
+}
+
+
+/* ---------------------------------------------------------
+   04 — CONTACT CARDS
+--------------------------------------------------------- */
+
+.contact-info-card,
+.contact-start-card {
+    padding: 30px;
+    border-radius: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   05 — CARD HEADER
+--------------------------------------------------------- */
+
+.contact-card-header {
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   06 — CIRCULAR NAVY NUMBERS
+--------------------------------------------------------- */
+
+.contact-card-number {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #111827 !important;
+    color: #ffffff !important;
+
+    font-size: 12px !important;
+    font-weight: 800;
+
+    letter-spacing: .03em;
+
+    flex-shrink: 0;
+}
+
+
+/* ---------------------------------------------------------
+   07 — CARD SMALL LABEL
+--------------------------------------------------------- */
+
+.contact-mini-label {
+    margin-bottom: 5px;
+
+    font-size: 12px !important;
+    line-height: 1.5;
+
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   08 — CARD TITLES
+--------------------------------------------------------- */
+
+.contact-info-card h2,
+.contact-start-card h2 {
+    margin: 0;
+
+    font-size: 24px !important;
+    line-height: 1.4;
+
+    font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   09 — CARD DESCRIPTION
+--------------------------------------------------------- */
+
+.contact-card-intro,
+.contact-start-card > p:not(.contact-response-note) {
+    max-width: 580px;
+
+    margin: 0 0 22px;
+
+    font-size: 14px !important;
+    line-height: 1.9;
+
+    color: var(--contact-text-light);
+}
+
+
+/* ---------------------------------------------------------
+   10 — CONTACT ITEMS
+--------------------------------------------------------- */
+
+.contact-info-item {
+    gap: 14px;
+
+    min-height: 68px;
+
+    padding: 12px 0;
+}
+
+
+/* ---------------------------------------------------------
+   11 — CONTACT ICONS
+--------------------------------------------------------- */
+
+.contact-info-icon {
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    font-size: 17px;
+}
+
+
+/* ---------------------------------------------------------
+   12 — CONTACT INFORMATION TEXT
+--------------------------------------------------------- */
+
+.contact-info-content {
+    gap: 2px;
+}
+
+.contact-info-content strong {
+    font-size: 14px !important;
+    line-height: 1.6;
+}
+
+.contact-info-content small {
+    font-size: 12.5px !important;
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   13 — ARROW
+--------------------------------------------------------- */
+
+.contact-info-arrow {
+    font-size: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   14 — SERVICE TAGS
+--------------------------------------------------------- */
+
+.contact-service-tags {
+    gap: 8px;
+
+    margin: 20px 0 25px;
+}
+
+.contact-service-tags span {
+    min-height: 34px;
+
+    padding: 6px 12px;
+
+    font-size: 12px !important;
+}
+
+
+/* ---------------------------------------------------------
+   15 — MAIN BUTTON
+--------------------------------------------------------- */
+
+.contact-main-button {
+    min-height: 46px;
+
+    padding-inline: 20px;
+
+    font-size: 13px !important;
+}
+
+
+/* ---------------------------------------------------------
+   16 — RESPONSE NOTE
+--------------------------------------------------------- */
+
+.contact-response-note {
+    margin-top: 16px !important;
+
+    font-size: 12px !important;
+    line-height: 1.8 !important;
+}
+
+
+/* ---------------------------------------------------------
+   17 — FINAL CTA
+--------------------------------------------------------- */
+
+.contact-final-cta {
+    padding: 75px 20px;
+}
+
+.contact-final-content h2 {
+    margin: 16px 0 10px;
+
+    font-size: clamp(26px, 3vw, 36px) !important;
+    line-height: 1.4;
+}
+
+.contact-final-content p {
+    margin-bottom: 22px;
+
+    font-size: 14px !important;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-page-hero {
+        padding: 85px 16px 50px;
+    }
+
+    .contact-page .section-badge {
+        font-size: 13px !important;
+        padding: 7px 15px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 32px !important;
+        line-height: 1.4;
+    }
+
+    .contact-hero-content > p {
+        font-size: 14px !important;
+        line-height: 1.9;
+    }
+
+    .contact-page-main {
+        padding: 25px 16px 60px;
+    }
+
+    .contact-page-grid {
+        gap: 20px;
+    }
+
+    .contact-info-card,
+    .contact-start-card {
+        padding: 25px 22px;
+    }
+
+    .contact-card-number {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+
+        font-size: 11px !important;
+    }
+
+    .contact-info-card h2,
+    .contact-start-card h2 {
+        font-size: 22px !important;
+    }
+
+    .contact-card-intro,
+    .contact-start-card > p:not(.contact-response-note) {
+        font-size: 13.5px !important;
+    }
+
+    .contact-info-icon {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+    .contact-info-content strong {
+        font-size: 13px !important;
+    }
+
+    .contact-info-content small {
+        font-size: 12px !important;
+    }
+}
+/* =========================================================
+   LEAD FORM STYLING
+========================================================= */
+
+.contact-lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.contact-lead-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-lead-form label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--contact-text);
+}
+
+.contact-lead-form input,
+.contact-lead-form select,
+.contact-lead-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(43, 39, 124, 0.15);
+    background: var(--contact-surface);
+    color: var(--contact-text);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-lead-form select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%232b277c' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: left 12px center;
+}
+
+.contact-lead-form input:focus,
+.contact-lead-form select:focus,
+.contact-lead-form textarea:focus {
+    outline: none;
+    border-color: var(--contact-primary);
+    box-shadow: 0 0 0 3px rgba(43, 39, 124, 0.12);
+}
+
+/* Dark Mode Overrides for Form */
+body.dark-mode .contact-lead-form input,
+body.dark-mode .contact-lead-form select,
+body.dark-mode .contact-lead-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+body.dark-mode .contact-lead-form select option {
+    background: #111827;
+    color: #ffffff;
+}

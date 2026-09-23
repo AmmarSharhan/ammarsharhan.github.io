@@ -1,0 +1,49 @@
+/* ===========================================================
+   ANIMATIONS
+=========================================================== */
+
+/* العناصر قبل الظهور */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+}
+
+/* بعد الظهور */
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================================================
+   PREMIUM FEATURE 7
+   Animated Counters
+=========================================================== */
+
+.stat-number{
+
+    display:inline-block;
+
+    min-width:1ch;
+
+    transition:
+        transform .3s ease;
+
+}
+
+.stat-card:hover .stat-number{
+
+    transform:translateY(-2px);
+
+}

@@ -1,0 +1,321 @@
+/* =========================================================
+   PROJECTS PAGE STYLING (CLEAN & UNIFIED)
+========================================================= */
+
+/* --- 01. Page Hero --- */
+.page-hero {
+    min-height: auto;
+    padding: 100px 0 50px;
+}
+
+.page-hero .section-header {
+    max-width: 850px;
+    margin-inline: auto;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.page-hero .section-header h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.page-hero .section-header p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-secondary, var(--muted-text));
+}
+
+/* --- 02. Project Study Section & Card --- */
+.project-study {
+    padding: 60px 0;
+}
+
+.project-study-card {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+    gap: 40px;
+    padding: 40px;
+    margin-bottom: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-study-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+/* --- 03. Project Image --- */
+.project-study-image {
+    width: 100%;
+    min-height: 320px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--surface-alt, rgba(0, 0, 0, 0.03));
+}
+
+.project-study-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-study-card:hover .project-study-image img {
+    transform: scale(1.03);
+}
+
+/* --- 04. Project Content --- */
+.project-study-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--primary);
+}
+
+.project-study-content h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.project-study-content h3 {
+    margin: 0 0 16px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-secondary, var(--muted-text));
+}
+
+.project-study-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--text-secondary, var(--muted-text));
+}
+
+/* --- 05. Project Meta Badges --- */
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.project-meta span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--surface-alt, rgba(0, 0, 0, 0.04));
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary, var(--muted-text));
+}
+
+/* --- 06. Project Details & Checklist --- */
+.project-study-details {
+    grid-column: 1 / -1;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+}
+
+.project-study-details h3 {
+    margin: 0 0 18px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.project-study-details ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-study-details li {
+    position: relative;
+    padding-right: 22px;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--text-secondary, var(--muted-text));
+}
+
+.project-study-details li::before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+/* --- 07. Project Highlights & Next Steps --- */
+.project-highlight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 14px 20px;
+    border-radius: 14px;
+    background: var(--surface-alt, rgba(0, 0, 0, 0.03));
+    border: 1px solid var(--border);
+}
+
+.project-highlight strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.project-highlight span {
+    color: var(--text-secondary, var(--muted-text));
+    font-size: 0.95rem;
+}
+
+.project-next {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+
+.project-next span {
+    color: var(--text-secondary, var(--muted-text));
+}
+
+.project-next strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* --- 08. Creative Work & CTA --- */
+.creative-work,
+.projects-page-cta {
+    padding: 70px 0;
+}
+
+.creative-work .section-header {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+/* --- 09. Responsive Media Queries --- */
+@media (max-width: 992px) {
+    .project-study-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .project-study-image,
+    .project-study-image img {
+        min-height: 260px;
+    }
+
+    .project-study-details {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 40px;
+    }
+
+    .project-study {
+        padding: 40px 0;
+    }
+
+    .project-study-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .project-study-details ul {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .project-highlight {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-study-card {
+        padding: 18px;
+    }
+
+    .project-meta span {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+/* =========================================================
+   PHASE 4 — VISUAL CONSISTENCY
+   Keep project-page typography and media aligned with the
+   same central design tokens used across the rest of the site.
+========================================================= */
+
+.project-study-content h2,
+.project-study-details h3,
+.creative-work .section-header h2,
+.projects-page-cta .section-header h2 {
+    color: var(--text);
+}
+
+.project-study-content h3,
+.project-study-content p,
+.project-study-details li,
+.project-highlight span,
+.project-next span {
+    color: var(--text-light);
+}
+
+.project-study-image {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+}
+
+.project-study-image img {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 992px) {
+    .project-study-image,
+    .project-study-image img {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-study-image,
+    .project-study-image img {
+        min-height: 0;
+    }
+}
