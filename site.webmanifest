@@ -1,0 +1,15 @@
+{
+  "name": "Ammar Sharhan | Digital Marketing & AI Content",
+  "short_name": "Ammar Sharhan",
+  "start_url": "/ammar-portfolio/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2b277c",
+  "icons": [
+    {
+      "src": "/ammar-portfolio/assets/images/logo/favicon-navy.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}
