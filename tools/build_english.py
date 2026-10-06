@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import json, re
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE_URL = "https://ammarsharhan.github.io/ammar-portfolio"
+BASE_URL = "https://ammarsharhan.netlify.app"
 SRC_FILES = [ROOT / "index.html", *sorted((ROOT / "pages").glob("*.html"))]
 EN_ROOT = ROOT / "en"
 

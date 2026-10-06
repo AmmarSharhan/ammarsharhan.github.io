@@ -2573,3 +2573,8 @@ body.dark-mode .contact-lead-form select option {
     background: #111827;
     color: #ffffff;
 }
+
+/* Social platforms */
+.contact-social-block{margin-top:24px;padding-top:22px;border-top:1px solid var(--border,#e5e7eb)}
+.contact-social-heading{margin-bottom:14px}.contact-social-label{display:inline-block;margin-bottom:5px;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--primary,#1b1464)}.contact-social-heading h3{margin:0;font-size:18px}.contact-social-links{display:flex;flex-wrap:wrap;gap:10px}.contact-social-links a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 14px;border:1px solid var(--border,#e5e7eb);border-radius:10px;color:var(--text,#111827);background:var(--surface,#fff);text-decoration:none;font-size:13px;font-weight:700;transition:transform .2s ease,border-color .2s ease,background-color .2s ease}.contact-social-links a:hover{transform:translateY(-2px);border-color:var(--primary,#1b1464);background:var(--primary-light,#dbeafe)}
+@media(max-width:576px){.contact-social-links a{flex:1 1 calc(50% - 10px)}}

@@ -223,3 +223,10 @@
     gap: 15px;
     flex-wrap: wrap; /* لتنسيق الأزرار تحت بعضها في الشاشات الصغيرة جداً */
 }
+
+/* Production QA: unpublished article placeholders */
+.blog-link-disabled {
+    opacity: .58;
+    cursor: default;
+    text-decoration: none;
+}

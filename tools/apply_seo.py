@@ -5,7 +5,7 @@ from PIL import Image
 import json, re
 
 ROOT=Path(__file__).resolve().parents[1]
-BASE='https://ammarsharhan.github.io/ammar-portfolio'
+BASE='https://ammarsharhan.netlify.app'
 PAGES=[ROOT/'index.html',*sorted((ROOT/'pages').glob('*.html'))]
 
 def norm(v): return re.sub(r'\s+',' ',str(v or '')).strip()

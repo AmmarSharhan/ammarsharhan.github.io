@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/pages/about.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/pages/projects.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/pages/blog.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/pages/blog-single.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/pages/contact.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/en/</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/en/pages/about.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/en/pages/projects.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/en/pages/blog.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/en/pages/blog-single.html</loc></url>
-  <url><loc>https://ammarsharhan.github.io/ammar-portfolio/en/pages/contact.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/about.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/projects.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/blog.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/contact.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/about.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/projects.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/blog.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/contact.html</loc></url>
+
+  <url><loc>https://ammarsharhan.netlify.app/pages/visual-stimuli-purchase-decisions.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/ai-skills-content-creators.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/ak-perfumes-visual-identity.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/prompting-marketing-solutions.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/short-form-video-formula.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/pages/marketing-metrics-that-matter.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/visual-stimuli-purchase-decisions.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/ai-skills-content-creators.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/ak-perfumes-visual-identity.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/prompting-marketing-solutions.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/short-form-video-formula.html</loc></url>
+  <url><loc>https://ammarsharhan.netlify.app/en/pages/marketing-metrics-that-matter.html</loc></url>
 </urlset>
